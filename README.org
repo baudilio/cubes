@@ -1,5 +1,8 @@
 #+TITLE: Cubic grid
 
+#+STARTUP: inlineimages
+#+OPTIONS: ^:nil
+
 * Introduction
 
 Distribution of points on the surface of a cube
@@ -14,7 +17,19 @@ Run:
 
 $> ./cube.x > output.xyz
 
+
 * Visualization
 
 $> module load jmol
 $> jmol output.xyz
+
+Initial program version; only half of the cube is computed. See Fig1
+
+Figure 1
+#+ATTR_ORG: :width 300
+[[file:figures/fig1.jpg][file:figures/fig1.jpg]]
+
+
+To calculate the whole cube, I separate the pyramid in two parts: the equator (base of the pyramid)
+and the rest of the points up to the vertix. The latter group can be transformed into the missing
+cap that completes the cube.
