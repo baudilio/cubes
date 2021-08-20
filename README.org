@@ -1,0 +1,11 @@
+#+TITLE: Cubic grid
+
+* Introduction
+
+Distribution of points on the surface of a cube
+
+
+* Compilation
+
+$> module load gcc/10.3.0
+$> gfortran -Wall -O2 -o cube.x cube.f90 lib/base.f90

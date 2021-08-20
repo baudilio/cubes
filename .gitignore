@@ -1,0 +1,22 @@
+# ---
+
+# files from CMake
+CMakeCache.txt
+Makefile
+CMakeFiles/
+cmake_install.cmake
+lib/CMakeFiles/
+lib/Makefile
+lib/cmake_install.cmake
+prog/CMakeFiles/
+prog/Makefile
+prog/cmake_install.cmake
+
+# module, object, libs and binary executables
+*.mod
+*.a
+*.o
+*.x
+
+# Exclude the output files
+*.xyz
