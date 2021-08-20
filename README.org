@@ -37,3 +37,14 @@ Figure 1
 To calculate the whole cube, I separate the pyramid in two parts: the equator (base of the pyramid)
 and the rest of the points up to the vertix. The latter group can be transformed into the missing
 cap that completes the cube.
+
+In reality, the function ~cube~ builds a bipyramid of square base, not a cube. See figures 2a and
+2b.
+
+Figure 2a with N = 5
+#+ATTR_ORG: :width 300
+[[file:figures/Fig2a.jpg][file:figures/Fig2a.jpg]]
+
+Figure 2b with N = 12
+#+ATTR_ORG: :width 300
+[[file:figures/Fig2b.jpg][file:figures/Fig2b.jpg]]

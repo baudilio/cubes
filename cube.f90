@@ -3,7 +3,7 @@ program main
   use data, only: cube
   implicit none
 
-  integer, Parameter :: N = 5
+  integer, Parameter :: N = 5 ! N >= 1
   REAL :: x, y
   integer :: i, j
   Real, Parameter :: d = 2.0 ! length of the edge (u. of l.)
@@ -18,8 +18,7 @@ program main
 !     end do
 !  end do
 
-  print'(I5,/,"Hola")', (2*N + 1) * (2*N + 1)
-  !print'(I5,/,"Hola")', 2*(4*N*N + 1)
+  print'(I5,/,"Hola")', 2*(4*N*N + 1)
   do i=-N, N
      y = i*d/N
      print 100,  d,  y,  cube( d, y)
@@ -33,6 +32,7 @@ program main
      do j = -N+1, N-1
         y = j*d/N
         print 100, x, y,  cube(x,y)
+        print 100, x, y, -cube(x,y) + 2*d
      end do
   end do
 
