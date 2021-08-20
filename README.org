@@ -13,6 +13,10 @@ Distribution of points on the surface of a cube
 $> module load gcc/10.3.0
 $> gfortran -Wall -O2 -o cube.x cube.f90 lib/base.f90
 
+In direct compilation and linking, the order of source files matters.
+
+$> gfortran -Wall -O2 -o cube.x lib/base.f90 cube.f90
+
 Run:
 
 $> ./cube.x > output.xyz
