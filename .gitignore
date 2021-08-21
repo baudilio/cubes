@@ -20,3 +20,9 @@ prog/cmake_install.cmake
 
 # Exclude the output files
 *.xyz
+
+# Exclude Org/LaTeX auxiliary directories
+ltximg/
+
+# Exclude fort.* files
+fort.*

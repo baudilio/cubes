@@ -3,8 +3,8 @@ program main
   use data, only: cube, prueba => prueba
   implicit none
 
-  integer, Parameter :: N = 5 ! N >= 1
-  REAL :: x, y
+  integer, Parameter :: N = 32 ! N >= 1
+  REAL :: x, y, z
   integer :: i, j
 
   Real, Parameter :: d = 2.0 ! length of the edge (units of length)
