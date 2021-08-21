@@ -1,7 +1,7 @@
 #+TITLE: Cubic grid
 
 #+STARTUP: inlineimages
-#+OPTIONS: ^:nil
+#+OPTIONS: ^:nil tex:t
 
 * Introduction
 
@@ -11,6 +11,7 @@ Distribution of points on the surface of a cube
 * Compilation
 
 $> module load gcc/10.3.0
+
 $> gfortran -Wall -O2 -o cube.x cube.f90 lib/base.f90
 
 In direct compilation and linking, the order of source files matters.
@@ -25,6 +26,7 @@ $> ./cube.x > output.xyz
 * Visualization
 
 $> module load jmol
+
 $> jmol output.xyz
 
 Initial program version; only half of the cube is computed. See Fig1
@@ -35,7 +37,7 @@ Figure 1
 
 
 To calculate the whole cube, I separate the pyramid in two parts: the equator (base of the pyramid)
-and the rest of the points up to the vertix. The latter group can be transformed into the missing
+and the rest of the points up to the vertex. The latter group can be transformed into the missing
 cap that completes the cube.
 
 In reality, the function ~cube~ builds a bipyramid of square base, not a cube. See figures 2a and
@@ -51,8 +53,7 @@ Figure 2b with N = 12
 
 * Testing other functions
 
-Examples $\dfrac{\sqrt{2}}{2} \cdot \left( \left|x\right| + \left|y\right| \right)$ and
-$\dfrac{\sqrt{2}}{2} \cdot \left( \left|x + y\right| + \left|x - y\right| \right)$ See Figure 3.
+Examples $\dfrac{\sqrt{2}}{2} \cdot \left( \left|x\right| + \left|y\right| \right)$ and  $\dfrac{\sqrt{2}}{2} \cdot \left( \left|x + y\right| + \left|x - y\right| \right)$ See Figure 3.
 
 Figure 3
 #+ATTR_ORG: :width 300
