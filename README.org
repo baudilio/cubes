@@ -43,8 +43,8 @@ cap that completes the cube.
 In reality, the function ~cube~ builds a bipyramid of square base, not a cube. See figures 2a and
 2b.
 
-Figure 2a with N = 5
-#+ATTR_ORG: :width 300
+#+caption: Figure 2a with N = 5
+#+ATTR_ORG: :width 0.5\linewidth
 [[file:figures/Fig2a.jpg][file:figures/Fig2a.jpg]]
 
 Figure 2b with N = 12
@@ -58,3 +58,16 @@ Examples $\dfrac{\sqrt{2}}{2} \cdot \left( \left|x\right| + \left|y\right| \righ
 Figure 3
 #+ATTR_ORG: :width 300
 [[file:figures/fig3.jpg][file:figures/fig3.jpg]]
+
+
+Test Math:
+
+\[
+\dfrac{\sqrt{2}}{2} \cdot \left( \left|x\right| + \left|y\right| \right)
+\]
+
+and
+
+\[
+\dfrac{\sqrt{2}}{2} \cdot \left( \left|x + y\right| + \left|x - y\right| \right)
+\]
