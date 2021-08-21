@@ -3,9 +3,10 @@ program main
   use data, only: cube, prueba => prueba
   implicit none
 
-  integer, Parameter :: N = 24 ! N >= 1
-  REAL :: x, y, z
+  integer, Parameter :: N = 5 ! N >= 1
+  REAL :: x, y
   integer :: i, j
+
   Real, Parameter :: d = 2.0 ! length of the edge (units of length)
 
 
@@ -25,20 +26,21 @@ program main
 
   end do
 
-  ! Caps of the pyramid
   do i=-N+1, N-1
      x = i*d/N
+     print 100, x,  d,  cube(x, d)
+     print 100, x, -d,  cube(x,-d)
      do j = -N+1, N-1
         y = j*d/N
-        print 100, x, y,  cube(x,y) ! One cap of the pyramid.
-        print 100, x, y, -cube(x,y) + 2*d ! The second cap, shifted to complete the pyramid.
+        print 100, x, y,  cube(x,y)
+        print 100, x, y, -cube(x,y) + 2*d
      end do
   end do
 
 
-! BTA: test the 'prueba' function
-write(13, FMT='(I5,/,A)') 2*(2*N + 1)*(2*N + 1) + 1, "Hola cubo"
-write(13, FMT='(A)') 'Li 0. 0. 0.'
+  ! BTA: test the 'prueba' function
+  write(13, FMT='(I5,/,A)') 2*(2*N + 1)*(2*N + 1) + 1, "Hola cubo"
+  write(13, FMT='(A)') 'Li 0. 0. 0.'
   do i=-N, N
      x = i*d/N
      do j = -N, N
@@ -49,7 +51,7 @@ write(13, FMT='(A)') 'Li 0. 0. 0.'
   end do
 
 
-  100 FORMAT("H ", 3F12.5)
-  200 FORMAT(A2, 3F12.5)
+100 FORMAT("H ", 3F12.5)
+200 FORMAT(A2, 3F12.5)
 
 end program main
