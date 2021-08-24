@@ -2,6 +2,7 @@ MODULE data
   implicit none
   private
 
+  Real, Parameter :: PI = 3.141592653589793
   public :: cube, prueba, prueba2
 
 contains
@@ -27,7 +28,8 @@ contains
     u = abs(x)
     v = abs(y)
     z = 0.5*sqrt(2.0)* (u + v)
-
+    z = PI * (u + v) / 5
+    z = 2.0 - (u + v)
     return
   end function prueba
 
@@ -39,8 +41,9 @@ contains
 
     u = abs(x+y)
     v = abs(x-y)
-    z = 0.0 - (u + v)
-    z = 0.5*sqrt(2.0) * (u + v)
+    z = 1.0 - (u + v)
+    !z = 0.5*sqrt(2.0) * (u + v)
+    !z = (u + v)
 
     return
   end function prueba2

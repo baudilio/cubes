@@ -51,6 +51,7 @@ Figure 2b with N = 12
 #+ATTR_ORG: :width 300
 [[file:figures/Fig2b.jpg][file:figures/Fig2b.jpg]]
 
+
 * Testing other functions
 
 Examples $\dfrac{\sqrt{2}}{2} \cdot \left( \left|x\right| + \left|y\right| \right)$ and  $\dfrac{\sqrt{2}}{2} \cdot \left( \left|x + y\right| + \left|x - y\right| \right)$ See Figure 3.
