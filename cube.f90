@@ -1,6 +1,7 @@
 
 program main
   use data, only: cube, prueba => prueba
+  use transform
   implicit none
 
   integer, Parameter :: N = 16 ! N >= 1
@@ -10,7 +11,10 @@ program main
   Real, Parameter :: d = 0.707106781185 ! length of the edge (units of length)
   Real, Parameter :: sq = 0.707106781185 ! sqrt(2)/2
 
+  type(point) :: A, B
+
   Integer :: lu
+
 
   ! ---
 
@@ -96,18 +100,18 @@ program main
   open(newunit=lu, file='Qedge.xyz', action='write')
   write(lu, FMT='(I6,/,"Number of points on the edges of a cube")') 8 ! 4*(6*N - 1)
 
-  x=1.;y=1.;z=1. ! A
-  write(lu, FMT=200) "O",  x, y, z ! E(A)
-  write(lu, FMT=200) "O", -x, -y, -z ! i(A)
+  A = point(1., 1., 1.)
+  write(lu, FMT=200) "O",  A ! E(A)
+  write(lu, FMT=200) "O", Invert(A) ! i(A)
 
-  x=1.;y=1.;z=-1. ! B
-  write(lu, FMT=200) "O", x, y, z ! E(B)
-  write(lu, FMT=200) "O", -x, -y, -z ! i(B)
+  B = point(1., 1., -1.)
+  write(lu, FMT=200) "O", B ! E(B)
+  write(lu, FMT=200) "O", Invert(B) ! i(B)
 
-  write(lu, FMT=200) "O", z, x, y ! C3(B)
-  write(lu, FMT=200) "O", -z, -x, -y ! C3[i(B)]
-  write(lu, FMT=200) "O", y, z, x ! C3[C3(B)]
-  write(lu, FMT=200) "O", -y, -z, -x ! C3[C3[i(B)]]
+  write(lu, FMT=200) "O", C3(B) ! C3(B)
+  write(lu, FMT=200) "O", C3(Invert(B)) ! C3[i(B)]
+  write(lu, FMT=200) "O", C3(C3(B)) ! C3[C3(B)]
+  write(lu, FMT=200) "O", C3(C3(Invert(B)))! C3[C3[i(B)]]
 
   close(lu)
 

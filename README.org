@@ -18,9 +18,15 @@ In direct compilation and linking, the order of source files matters.
 
 $> gfortran -Wall -O2 -o cube.x lib/base.f90 cube.f90
 
+Including transform.f90
+
+$> gfortran -Wall -O2 -o cube.x lib/transform.f90 lib/base.f90 cube.f90
+
 Run:
 
 $> ./cube.x > output.xyz
+
+
 
 
 * Visualization
