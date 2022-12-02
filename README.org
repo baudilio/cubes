@@ -1,11 +1,27 @@
 #+TITLE: Cubic grid
-
+#+STARTUP: overview indent
 #+STARTUP: inlineimages
 #+OPTIONS: ^:nil tex:t
 
 * Introduction
 
 Distribution of points on the surface of a cube
+
+
+* Code
+
+I need to describe the algorithms, the code, the files, the libs, and
+where they are located.
+
+** Pyramid of squared base.
+The code in 'pyramyd_square.f90' corresponds to a pyramid of squared
+base whose vertices are the center of the circumscribed cube.
+
+The analytic expression of this pyramid is
+
+$$\left| x \right|+\left| y \right| + \left| z \right| = 1$$
+
+i.e., centered at the origin ofcoordinates.
 
 
 * Compilation
@@ -25,7 +41,6 @@ $> gfortran -Wall -O2 -o cube.x lib/transform.f90 lib/base.f90 cube.f90
 Run:
 
 $> ./cube.x > output.xyz
-
 
 
 
@@ -59,6 +74,10 @@ Figure 2b with N = 12
 
 
 * Testing other functions
+:LOGBOOK:
+- Note taken on [2022-12-01 Thu 11:57] \\
+  Recall to use 'C-c C-x C-l' to visualize mathematical expressions.
+:END:
 
 Examples $\dfrac{\sqrt{2}}{2} \cdot \left( \left|x\right| + \left|y\right| \right)$ and  $\dfrac{\sqrt{2}}{2} \cdot \left( \left|x + y\right| + \left|x - y\right| \right)$ See Figure 3.
 
@@ -78,3 +97,15 @@ and
 \[
 \dfrac{\sqrt{2}}{2} \cdot \left( \left|x + y\right| + \left|x - y\right| \right)
 \]
+
+** A cube
+
+Is this teh surface of a cube of center $\left( x_0, y_0, z_0\right)$
+and ~edge~ $d$?
+
+\[
+\left|x - x_0\right| + \left|x - y_0\right| + \left|z -
+z_0\right| = d
+\]
+
+BTA: to be tested and studied.
