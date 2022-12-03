@@ -13,15 +13,17 @@ Distribution of points on the surface of a cube
 I need to describe the algorithms, the code, the files, the libs, and
 where they are located.
 
-** Pyramid of squared base.
-The code in 'pyramyd_square.f90' corresponds to a pyramid of squared
-base whose vertices are the center of the circumscribed cube.
+** Pyramid of squared base - octahedron
 
-The analytic expression of this pyramid is
+The code in 'octahedron.f90' corresponds to the octahedron centered at
+the origin of coordinates inscribed in a cube. The vertices of the
+octahedron lie on the center of the faces of the circumscribing cube.
+
+The analytic expression of the octahedron is
 
 $$\left| x \right|+\left| y \right| + \left| z \right| = 1$$
 
-i.e., centered at the origin ofcoordinates.
+i.e., centered at the origin of coordinates.
 
 
 * Compilation
