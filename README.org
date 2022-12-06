@@ -1,7 +1,9 @@
 #+TITLE: Cubic grid
 #+STARTUP: overview indent
 #+STARTUP: inlineimages
+#+STARTUP: latexpreview
 #+OPTIONS: ^:nil tex:t
+
 
 * Introduction
 
@@ -24,6 +26,19 @@ The analytic expression of the octahedron is
 $$\left| x \right|+\left| y \right| + \left| z \right| = 1$$
 
 i.e., centered at the origin of coordinates.
+
+
+** cube_max_xyz.f90
+
+This an analytic function/expression for the surface of the cube:
+
+max(abs(x),abs(x),abs(x)) = 1.0
+
+$\max\left(\left|x\right|,\; \left|y\right|,\; \left|z\right|\right) = 1$
+
+Figure 1
+#+ATTR_ORG: :width 300
+[[file:figures/cube2.jpg][file:figures/cube.jpg]]
 
 
 * Compilation
